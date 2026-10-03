@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 10, "column": 0}, "map": {"version":3,"sources":["file:///Users/shakthibharathkumaravel/Downloads/shakthi-nivethaa-einvite/app/surprise/page.tsx"],"sourcesContent":["import type { Metadata } from 'next';\nimport SurpriseExperience from './surprise-experience';\n\nexport const metadata: Metadata = {\n  title: 'A little something for Nivethaa',\n  description: 'A story made with love, just for Nivethaa.',\n};\n\nexport default function SurprisePage() {\n  return <SurpriseExperience />;\n}\n"],"names":["metadata","title","description","SurprisePage","SurpriseExperience"],"mappings":";;;;;;;;;;;;;;AAGO,MAAMA,WAAqB;IAChCC,OAAO;IACPC,aAAa;AACf;AAEe,SAASC;IACtB,qBAAO,8OAACC;;;;;AACV"}}]
+}

@@ -1,0 +1,34 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/README/layout,_N_T_/README/page,_N_T_/README"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/README/__PAGE__"
+  ],
+  "prefetchHints": {
+    "hints": 64,
+    "slots": {
+      "children": {
+        "hints": 96,
+        "slots": {
+          "children": {
+            "hints": 160,
+            "slots": null
+          }
+        }
+      }
+    }
+  },
+  "routeCache": {
+    "key": "/route-cache/APP_PAGE/fe5a47613e27b39fedda744d7e95149c5f82cfbb534a1155d53de33a91d1c22d/$/README",
+    "owner": {
+      "kind": "APP_PAGE",
+      "sourceRoute": "/README/page"
+    },
+    "isFallback": false
+  }
+}

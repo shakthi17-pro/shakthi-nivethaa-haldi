@@ -1,0 +1,25 @@
+/* [project]/app/globals.css [app-client] (css) */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  color: #f7e7bd;
+  background: #160b0b;
+  margin: 0;
+  font-family: Georgia, Times New Roman, serif;
+}
+
+button {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+/*# sourceMappingURL=app_globals_0yg4wg8.css.map*/

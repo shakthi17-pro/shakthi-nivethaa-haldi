@@ -1,0 +1,32 @@
+.readme {
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  padding: max(28px, env(safe-area-inset-top)) 20px max(28px, env(safe-area-inset-bottom));
+  color: #f5ecd9;
+  background: radial-gradient(ellipse at 50% 20%, #4c211d, #160d0d 68%);
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.frame {
+  width: min(100%, 560px);
+  padding: clamp(27px, 7vw, 49px);
+  border: 1px solid rgba(214, 184, 115, .29);
+  box-shadow: inset 0 0 0 7px rgba(214, 184, 115, .035), 0 35px 100px rgba(0, 0, 0, .22);
+}
+
+.eyebrow { margin: 0 0 20px; color: #d6b873; font: 8px Arial, sans-serif; letter-spacing: .24em; }
+.frame h1 { margin: 0; color: #f5ecd9; font-size: clamp(38px, 10vw, 53px); font-weight: 400; }
+.frame h1 em { color: #e2c786; }
+.rule { width: 42px; height: 1px; margin: 24px 0; background: #d6b873; }
+.metadata { display: grid; gap: 15px; margin: 0 0 30px; }
+.metadata div { display: flex; justify-content: space-between; gap: 15px; }
+.metadata dt { color: rgba(245, 236, 217, .48); font: 10px Arial, sans-serif; letter-spacing: .09em; }
+.metadata dd { margin: 0; color: #f1dfb9; font-size: 13px; text-align: right; }
+.statusDot { display: inline-block; width: 6px; height: 6px; margin-right: 5px; border-radius: 50%; background: #a7bf86; box-shadow: 0 0 8px #a7bf86; }
+.frame section { margin: 0 0 27px; }
+.frame section h2 { margin: 0 0 13px; color: #d6b873; font: 9px Arial, sans-serif; letter-spacing: .17em; text-transform: uppercase; }
+.frame ul { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.frame li { padding: 8px 10px; border: 1px solid rgba(214, 184, 115, .19); color: rgba(245, 236, 217, .73); font-size: 12px; }
+.heart { color: #d68776; }
+.signature { margin-top: 34px; color: rgba(245, 236, 217, .35); font-size: 11px; font-style: italic; text-align: center; }
