@@ -1,3 +1,4 @@
 {
+  "/api/favourite-memory/route": "app/api/favourite-memory/route.js",
   "/surprise/page": "app/surprise/page.js"
 }
