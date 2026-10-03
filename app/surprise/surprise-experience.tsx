@@ -4,10 +4,10 @@ import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import styles from './surprise.module.css';
 import { surpriseContent } from './content';
+import MoodExperience from './mood-experience';
 import {
   BootScene,
   CelebrationScene,
-  ComfortScene,
   DateScene,
   FavouriteScene,
   HaldiScene,
@@ -77,7 +77,6 @@ export default function SurpriseExperience() {
 
   useEffect(() => {
     if (stage !== 'celebration') return;
-    setCommandCount(0);
     const timer = window.setInterval(() => {
       setCommandCount((count) => {
         if (count >= 3) {
@@ -188,7 +187,7 @@ export default function SurpriseExperience() {
       case 'years': return <YearsScene onRun={() => setStage('haldi')} />;
       case 'haldi': return <HaldiScene onGo={() => setStage('celebration')} />;
       case 'celebration': return <CelebrationScene commandsVisible={commandCount} onComfort={() => setStage('comfort')} />;
-      case 'comfort': return <ComfortScene onReturn={() => setStage('celebration')} />;
+      case 'comfort': return <MoodExperience onReturn={() => setStage('celebration')} />;
     }
   };
 

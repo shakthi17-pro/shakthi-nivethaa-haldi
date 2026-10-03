@@ -224,6 +224,54 @@
 .comfortSignoff { margin: 25px 0 0; color: #e4c887; font-size: 13px; font-style: italic; }
 .comfortScene .primaryButton { margin-top: 35px; }
 
+.moodExperience { width: min(100%, 540px); max-height: calc(100svh - 138px); overflow-y: auto; padding: 22px 18px; scrollbar-width: none; border: 1px solid rgba(214, 184, 115, .14); background: radial-gradient(ellipse at 50% 0, rgba(123, 64, 47, .19), transparent 62%); animation: moodEntrance .62s cubic-bezier(.2,.7,.25,1) both; }
+.moodExperience::-webkit-scrollbar { display: none; }
+.moodKicker { margin: 0 0 13px; color: #d6b873; font: 8px Arial, sans-serif; letter-spacing: .24em; text-transform: uppercase; }
+.moodTitle { max-width: 430px; margin: 0 auto; color: #f4e6ce; font-size: clamp(29px, 8vw, 39px); font-weight: 400; line-height: 1.15; }
+.moodIntro { margin: 14px 0 19px; color: rgba(248, 238, 219, .68); font-size: 13px; line-height: 1.7; }
+.moodDoors { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.moodDoor { min-height: 46px; padding: 9px 10px; display: flex; align-items: center; justify-content: space-between; gap: 5px; border: 1px solid rgba(214, 184, 115, .23); background: linear-gradient(130deg, rgba(109, 56, 44, .35), rgba(255, 248, 229, .018)); color: rgba(248, 238, 219, .9); text-align: left; font: 9px/1.35 Arial, sans-serif; letter-spacing: .06em; cursor: pointer; transition: border-color .3s, background .3s, transform .3s; }
+.moodDoor span { color: #d6b873; }
+.moodDoor:hover, .moodDoor:focus-visible { transform: translateY(-2px); border-color: rgba(214, 184, 115, .68); background: rgba(142, 80, 58, .34); outline: none; }
+.moodBack { display: block; margin: 0 auto 14px; padding: 9px 12px; border: 0; background: transparent; color: rgba(214, 184, 115, .76); font: 8px Arial, sans-serif; letter-spacing: .13em; cursor: pointer; }
+.moodMessage { margin: 14px auto 0; color: rgba(248, 238, 219, .76); font-size: 13px; line-height: 1.68; white-space: pre-line; }
+.moodArtwork { position: relative; min-height: 84px; margin: 0 auto 10px; display: grid; place-items: center; overflow: hidden; color: #e5c987; }
+.moodAction { min-width: min(100%, 270px); min-height: 48px; margin: 20px auto 0; padding: 12px 17px; display: flex; align-items: center; justify-content: space-between; gap: 16px; border: 1px solid rgba(214, 184, 115, .54); background: linear-gradient(100deg, rgba(115, 51, 42, .58), rgba(78, 32, 31, .4)); color: var(--ink); font: 9px Arial, sans-serif; letter-spacing: .16em; cursor: pointer; }
+.moodAction:hover, .moodAction:focus-visible { border-color: #f1d99c; outline: none; }
+.moodNavigation { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 19px; margin: 17px auto 0; }
+.moodNavigation button { min-height: 38px; padding: 7px 4px; border: 0; background: none; color: rgba(214, 184, 115, .72); font: 8px Arial, sans-serif; letter-spacing: .11em; cursor: pointer; }
+.moodNavigation button:hover, .moodNavigation button:focus-visible { color: #f4e6ce; outline: 1px solid rgba(214, 184, 115, .5); outline-offset: 3px; }
+.moodFinal { margin: 17px auto 0; color: #f1d99c; font-size: 14px; line-height: 1.65; font-style: italic; white-space: pre-line; animation: moodAppear .7s ease both; }
+.moodWarm { background: radial-gradient(ellipse at 50% 32%, rgba(179, 124, 65, .23), rgba(123, 64, 47, .15) 42%, transparent 78%); }
+.art_celebrate::before, .art_stay::before, .art_heart::before { width: 59px; height: 59px; content: '♡'; display: grid; place-items: center; border: 1px solid rgba(214,184,115,.28); border-radius: 50%; color: #e6c68b; font-size: 26px; box-shadow: 0 0 30px rgba(214,184,115,.1); }
+.artDone.art_celebrate::before { box-shadow: 0 0 65px 25px rgba(228, 174, 91, .23); }
+.art_stay::before { animation: heart 3s ease-in-out infinite; }
+.stone { width: 45px; height: 38px; display: grid; place-items: center; color: #c7a976; font-size: 31px; filter: drop-shadow(0 0 13px rgba(214,184,115,.35)); transition: transform 1s, opacity 1s; }
+.artDone .stone { transform: translateY(75px) scale(.5); opacity: 0; }
+.roomHeart { color: #d78076; font-size: 38px; text-shadow: 0 0 22px rgba(215,128,118,.48); transition: transform 1s, color 1s, text-shadow 1s; animation: heart 2.6s ease-in-out infinite; }
+.artDone .roomHeart { color: #ffd7a1; text-shadow: 0 0 42px #e8bc79; transform: scale(1.45); }
+.paper { padding: 12px 17px; border: 1px solid rgba(214,184,115,.45); background: linear-gradient(145deg, #e7d6b5, #9a795f); color: #442a24; font: 8px Arial,sans-serif; letter-spacing: .2em; box-shadow: 0 8px 18px #09060655; transition: transform .9s, opacity .9s; }
+.artDone .paper { transform: translateY(-12px) scale(.82); opacity: .15; }
+.breathCircle { width: 48px; height: 48px; border: 1px solid rgba(214,184,115,.62); border-radius: 50%; background: rgba(214,184,115,.08); }
+.breathActive { animation: breathe 8s ease-in-out 1; }
+.artDone .breathCircle { animation: none; }
+.breathWord { position: absolute; bottom: 3px; color: rgba(248,238,219,.62); font: 7px Arial,sans-serif; letter-spacing: .1em; }
+.paths { display: flex; justify-content: center; gap: 10px; }
+.paths button, .confidenceChoices button { min-height: 40px; padding: 10px 14px; border: 1px solid rgba(214,184,115,.34); background: rgba(255,248,229,.035); color: #f4e6ce; font: 8px Arial,sans-serif; letter-spacing: .12em; cursor: pointer; }
+.paths button:hover, .paths .pathSelected { border-color: #e5c987; background: rgba(214,184,115,.12); }
+.confidenceChoices { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; margin-top: 15px; }
+.confidenceChoices button { padding: 8px 5px; font-size: 7px; }
+.choiceResponse { margin: 12px auto 0; color: #f1d99c; font-size: 12px; font-style: italic; }
+.worryWords { width: min(100%, 260px); display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px; }
+.worryWords span { padding: 6px 9px; border: 1px solid rgba(214,184,115,.19); color: rgba(248,238,219,.62); font: 7px Arial,sans-serif; letter-spacing: .1em; transition: transform 1.5s, opacity 1.5s; }
+.wordsGone span { transform: translateY(-95px) rotate(8deg); opacity: 0; }
+.particle { position: absolute; color: #e8cb8d; font-size: 13px; font-style: normal; animation: particleRise 1.8s ease-out both; animation-delay: calc(var(--i) * 70ms); }
+.particle:nth-child(1) { left: 20%; bottom: 15%; }.particle:nth-child(2) { left: 35%; bottom: 10%; }.particle:nth-child(3) { left: 50%; bottom: 12%; }.particle:nth-child(4) { left: 65%; bottom: 10%; }.particle:nth-child(5) { left: 78%; bottom: 14%; }.particle:nth-child(6) { left: 45%; bottom: 8%; }
+@keyframes breathe { 0%,100% { transform: scale(.78); box-shadow: 0 0 8px rgba(214,184,115,.12); } 25% { transform: scale(1.25); box-shadow: 0 0 30px rgba(214,184,115,.35); } 42% { transform: scale(1.25); } 68% { transform: scale(.78); } }
+@keyframes particleRise { to { transform: translateY(-58px) scale(.65); opacity: 0; } }
+@keyframes moodAppear { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes moodEntrance { from { opacity: 0; transform: translateY(12px) scale(.985); filter: blur(3px); } to { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); } }
+
 .secretTrigger { padding: 8px; border: 0; background: transparent; color: rgba(214, 184, 115, .4); font-size: 15px; cursor: pointer; }
 .secretTrigger:hover, .secretTrigger:focus-visible { color: #eddaa7; outline: none; }
 .secretOverlay { position: fixed; z-index: 5; inset: 0; display: grid; place-items: center; padding: 25px; background: rgba(10, 7, 7, .78); backdrop-filter: blur(9px); }

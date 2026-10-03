@@ -51,11 +51,5 @@ export const surpriseContent = {
     city: 'MADURAI',
     finalMessage: "Close this. I'm waiting for you.",
   },
-  comfortRoom: {
-    eyebrow: 'A quiet little place, just for you',
-    title: 'Take a breath, my love.',
-    message: 'Whatever today brings, you do not have to carry it alone. I am right here with you. We can take this one moment at a time.',
-    signoff: 'Always by your side, Shakthi ❤️',
-  },
   secretMessage: 'You found my little secret. I love you more than this code could ever say.',
 } as const;
