@@ -14,6 +14,7 @@ export const surpriseContent = {
     title: 'The First Words',
     question: 'Who said “I love you” first?',
     choices: ['SHAKTHI', 'NIVETHAA'],
+    revealHeadline: 'The words were only the beginning.',
     message:
       'Maybe one of us said it first. But from that moment on, the feeling belonged to both of us.',
   },
@@ -24,6 +25,7 @@ export const surpriseContent = {
     choices: ['Comali', 'Dear Comrade', 'Nerkonda Paarvai'],
     // Keep the existing answer until Shakthi confirms the real movie.
     answer: 'Our first movie together',
+    revealHeadline: 'Our first movie.',
     message: 'The screen went dark, but that little memory stayed with me.',
   },
   dateMemory: {
@@ -33,6 +35,7 @@ export const surpriseContent = {
     choices: ['Ice Cream Parlour', 'Maruthamalai Temple', 'A quiet café in Coimbatore'],
     // Keep the existing answer until Shakthi confirms the real first date.
     answer: 'The day our story began',
+    revealHeadline: 'The beginning of us.',
     message: 'Somehow, every road after that kept bringing me closer to you.',
   },
   favouriteMemory: {
@@ -41,7 +44,7 @@ export const surpriseContent = {
     reveal:
       'My favourite memories are the ordinary moments that became extraordinary because I was with you. And after all this time, I still choose you.',
   },
-  yearsMessage: 'Thirteen years of becoming us.',
+  yearsMessage: '13 years of becoming us.',
   haldi: {
     date: 'OCTOBER 3',
     venue: 'ARO VILLAS',

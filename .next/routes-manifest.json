@@ -42,6 +42,12 @@
       "namedRegex": "^/_not\\-found(?:/)?$"
     },
     {
+      "page": "/api/favourite-memory",
+      "regex": "^/api/favourite\\-memory(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/favourite\\-memory(?:/)?$"
+    },
+    {
       "page": "/README",
       "regex": "^/README(?:/)?$",
       "routeKeys": {},

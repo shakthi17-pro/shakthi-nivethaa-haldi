@@ -1,4 +1,5 @@
 const STORE_KEY = 'haldi:favourite-memory';
+export const dynamic = 'force-dynamic';
 
 function storageConfig() {
   const url = process.env.UPSTASH_REDIS_REST_URL?.replace(/\/$/, '');
@@ -16,6 +17,22 @@ function unavailable() {
 export async function POST(request: Request) {
   const storage = storageConfig();
   if (!storage) return unavailable();
+
+  if (Number(request.headers.get('content-length') ?? 0) > 12_000) {
+    return Response.json({ error: 'The memory is too long.' }, { status: 413 });
+  }
+
+  const origin = request.headers.get('origin');
+  const requestHost = request.headers.get('x-forwarded-host') ?? request.headers.get('host');
+  if (origin && requestHost) {
+    try {
+      if (new URL(origin).host !== requestHost) {
+        return Response.json({ error: 'Request rejected.' }, { status: 403 });
+      }
+    } catch {
+      return Response.json({ error: 'Request rejected.' }, { status: 403 });
+    }
+  }
 
   let input: unknown;
   try {

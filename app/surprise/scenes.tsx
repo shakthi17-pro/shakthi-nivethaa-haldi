@@ -97,7 +97,7 @@ export function MovieScene({ onChoose, feedback }: ChoiceProps) {
       <MemoryHeading index="02" title={memory.title} question={memory.question} />
       <div className={styles.tickets} role="group" aria-label="Choose our first movie">
         {memory.choices.map((movie, index) => (
-          <button className={`${styles.ticket} ${selected === movie ? (movie === memory.answer ? styles.ticketSelected : styles.ticketPicked) : ''}`} key={movie} onClick={() => { setSelected(movie); onChoose(movie); }} type="button">
+          <button className={`${styles.ticket} ${selected === movie ? (movie === String(memory.answer) ? styles.ticketSelected : styles.ticketPicked) : ''}`} key={movie} onClick={() => { setSelected(movie); onChoose(movie); }} type="button">
             <span className={styles.ticketStub}>ADMIT ONE <i>✳</i></span>
             <span className={styles.ticketNumber}>0{index + 1}</span>
             <span className={styles.ticketTitle}>{movie}</span>
@@ -106,7 +106,7 @@ export function MovieScene({ onChoose, feedback }: ChoiceProps) {
         ))}
       </div>
       <p className={styles.feedback} aria-live="polite">{feedback}</p>
-      {selected === memory.answer && <div className={styles.filmTransition} aria-hidden="true"><span /></div>}
+      {selected === String(memory.answer) && <div className={styles.filmTransition} aria-hidden="true"><span /></div>}
     </section>
   );
 }
@@ -189,7 +189,7 @@ export function ProcessingScene({ match, onNext }: { match: boolean; onNext?: ()
 export function YearsScene({ onRun }: { onRun: () => void }) {
   return (
     <section className={`${styles.panel} ${styles.yearsScene}`}>
-      <p className={styles.kicker}>A lifetime, so far</p>
+      <p className={styles.kicker}>{surpriseContent.yearsMessage}</p>
       <p className={styles.systemLabel}>SYSTEM STATUS</p>
       <div className={styles.statusRows}>
         <p><span>MEMORIES</span><i /><strong>100%</strong></p>

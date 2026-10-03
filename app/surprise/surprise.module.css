@@ -49,6 +49,11 @@
 .footer { bottom: max(32px, env(safe-area-inset-bottom)); }
 .online { display: flex; align-items: center; gap: 7px; }
 .online i { width: 5px; height: 5px; border-radius: 50%; background: #9dba8b; box-shadow: 0 0 9px rgba(157, 186, 139, .8); }
+.headerActions { display: flex; align-items: center; gap: 13px; }
+.musicControl { min-height: 34px; padding: 7px 0; display: inline-flex; align-items: center; gap: 6px; border: 0; background: transparent; color: #e3ce99; font: 7px Arial, sans-serif; letter-spacing: .1em; cursor: pointer; }
+.musicControl span { width: 18px; height: 18px; display: grid; place-items: center; border: 1px solid rgba(214, 184, 115, .38); border-radius: 50%; font-size: 7px; }
+.musicControl:hover, .musicControl:focus-visible { color: #fff0c7; }
+.musicControl:focus-visible { outline: 1px solid #d6b873; outline-offset: 3px; }
 
 .panel { width: min(100%, 480px); text-align: center; padding: 34px 18px; }
 .boot { padding-top: 15px; }
@@ -124,7 +129,7 @@
 
 .movieScene .memoryOrnament { margin-top: 24px; }
 .tickets { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 26px; }
-.ticket { position: relative; min-height: 156px; padding: 13px 12px 15px; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-between; border: 1px solid rgba(214, 184, 115, .44); border-radius: 2px; overflow: hidden; background: linear-gradient(150deg, rgba(106, 54, 42, .73), rgba(43, 25, 22, .9)); color: var(--ink); text-align: left; cursor: pointer; transition: transform .3s, border-color .3s, box-shadow .3s; }
+.ticket { position: relative; min-height: 156px; padding: 13px 12px 15px; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-between; border: 1px solid rgba(214, 184, 115, .44); border-radius: 2px; overflow: hidden; background-image: radial-gradient(ellipse at 18% 14%, rgba(231, 200, 143, .1), transparent 42%), repeating-linear-gradient(0deg, rgba(255, 255, 255, .014) 0 1px, transparent 1px 3px), linear-gradient(150deg, rgba(106, 54, 42, .73), rgba(43, 25, 22, .9)); color: var(--ink); text-align: left; cursor: pointer; transition: transform .3s, border-color .3s, box-shadow .3s; }
 .ticket::before, .ticket::after { position: absolute; top: 51%; width: 13px; height: 13px; content: ''; border: 1px solid rgba(214, 184, 115, .42); border-radius: 50%; background: #1b1110; }
 .ticket::before { left: -8px; }
 .ticket::after { right: -8px; }
@@ -143,7 +148,7 @@
 .filmTransition::after { top: calc(50% + 25px); }
 .filmTransition span { width: 100%; height: 50px; border-top: 1px solid rgba(214, 184, 115, .48); border-bottom: 1px solid rgba(214, 184, 115, .48); background: linear-gradient(90deg, transparent, rgba(214, 184, 115, .19), transparent); transform: scaleX(0); animation: filmWipe .62s ease-in-out both; }
 
-.map { position: relative; height: 134px; margin: 23px 0 20px; overflow: hidden; border: 1px solid rgba(214, 184, 115, .16); background: rgba(244, 226, 183, .035); }
+.map { position: relative; height: 134px; margin: 23px 0 20px; overflow: hidden; border: 1px solid rgba(214, 184, 115, .16); background: radial-gradient(ellipse at 70% 30%, rgba(194, 142, 108, .09), transparent 50%), repeating-linear-gradient(27deg, rgba(214, 184, 115, .025) 0 1px, transparent 1px 18px), rgba(244, 226, 183, .035); }
 .mapGrid { position: absolute; inset: 0; opacity: .44; background-image: linear-gradient(rgba(214, 184, 115, .1) 1px, transparent 1px), linear-gradient(90deg, rgba(214, 184, 115, .1) 1px, transparent 1px); background-size: 25px 25px; transform: rotate(-8deg) scale(1.2); }
 .map svg { position: absolute; inset: 6px 0; width: 100%; height: calc(100% - 12px); overflow: visible; }
 .routeUnderlay, .routePath { fill: none; stroke-linecap: round; stroke-width: 2; }
@@ -153,7 +158,7 @@
 .mapStart, .mapEnd { position: absolute; z-index: 1; display: flex; align-items: center; gap: 5px; color: rgba(248, 238, 219, .55); font: 7px Arial, sans-serif; letter-spacing: .13em; }
 .mapStart { bottom: 20px; left: 13px; }
 .mapStart i { width: 5px; height: 5px; border-radius: 50%; background: #e4c887; box-shadow: 0 0 8px #e4c887; }
-.mapDestination { position: absolute; top: 11px; right: 9px; color: #f1c0a5; font-size: 22px; opacity: 0; transition: opacity .6s .8s, transform .6s .8s; transform: scale(.5); }
+.mapDestination { position: absolute; top: 11px; right: 9px; color: #f1c0a5; font-size: 22px; text-shadow: 0 0 14px rgba(241, 192, 165, .8); filter: drop-shadow(0 0 7px rgba(241, 192, 165, .6)); opacity: 0; transition: opacity .6s .8s, transform .6s .8s; transform: scale(.5); }
 .mapComplete .mapDestination { opacity: 1; transform: scale(1); }
 .mapEnd { top: 37px; right: 13px; }
 .mapMemory { min-height: 52px; display: grid; place-items: center; color: rgba(248, 238, 219, .78); font-size: 13px; font-style: italic; line-height: 1.6; }
@@ -165,6 +170,7 @@
 .memoryForm textarea::placeholder { color: rgba(248, 238, 219, .3); font-style: italic; }
 .memoryForm textarea:focus { border-color: rgba(214, 184, 115, .8); box-shadow: 0 0 0 2px rgba(214, 184, 115, .1); }
 .memoryForm .primaryButton { max-width: none; margin-top: 14px; }
+.saveError { margin: 12px 0 0; color: #f0b1a4; font-size: 12px; line-height: 1.5; }
 .visuallyHidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 
 .processing { display: flex; min-height: 350px; flex-direction: column; align-items: center; justify-content: center; }
@@ -238,6 +244,18 @@
   .experience { padding-left: 40px; padding-right: 40px; }
   .panel { width: min(100%, 520px); padding: 44px; border: 1px solid rgba(214, 184, 115, .14); background: linear-gradient(145deg, rgba(255, 247, 229, .025), rgba(255, 247, 229, .005)); box-shadow: 0 30px 100px rgba(0, 0, 0, .15); }
   .boot { padding: 37px 44px; }
+}
+
+@media (max-width: 430px) {
+  .topline { left: 24px; right: 24px; }
+  .topline > span:first-child { font-size: 7px; letter-spacing: .11em; }
+  .headerActions { gap: 8px; }
+  .online { gap: 5px; font-size: 7px; letter-spacing: .12em; }
+  .musicControl { font-size: 6px; letter-spacing: .06em; }
+  .musicControl span { width: 16px; height: 16px; }
+  .tickets { gap: 8px; }
+  .ticket { min-height: 145px; padding: 12px 9px; }
+  .ticketTitle { font-size: 14px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

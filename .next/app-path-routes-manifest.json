@@ -2,6 +2,7 @@
   "/README/page": "/README",
   "/_global-error/page": "/_global-error",
   "/_not-found/page": "/_not-found",
+  "/api/favourite-memory/route": "/api/favourite-memory",
   "/page": "/",
   "/surprise/page": "/surprise"
 }

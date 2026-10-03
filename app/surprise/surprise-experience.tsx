@@ -141,7 +141,7 @@ export default function SurpriseExperience() {
   };
 
   const chooseMovie = (answer: string) => {
-    const configuredAnswerExists = surpriseContent.movieMemory.choices.includes(surpriseContent.movieMemory.answer);
+    const configuredAnswerExists = (surpriseContent.movieMemory.choices as readonly string[]).includes(surpriseContent.movieMemory.answer);
     if (configuredAnswerExists && answer !== surpriseContent.movieMemory.answer) {
       setFeedback('Not that one, love. Give it another little try.');
       return;
@@ -151,7 +151,7 @@ export default function SurpriseExperience() {
   };
 
   const chooseDate = (answer: string) => {
-    const configuredAnswerExists = surpriseContent.dateMemory.choices.includes(surpriseContent.dateMemory.answer);
+    const configuredAnswerExists = (surpriseContent.dateMemory.choices as readonly string[]).includes(surpriseContent.dateMemory.answer);
     if (configuredAnswerExists && answer !== surpriseContent.dateMemory.answer) {
       setFeedback('Almost, my love. Follow the memory once more.');
       return;
@@ -176,11 +176,11 @@ export default function SurpriseExperience() {
       case 'boot': return <BootScene progress={progress} checks={checks} />;
       case 'ready': return <ReadyScene onBegin={beginExperience} />;
       case 'loveQuestion': return <LoveQuestionScene onChoose={(answer) => { setLoveChoice(answer); moveAfter('loveReveal'); }} selected={loveChoice} feedback={feedback} />;
-      case 'loveReveal': return <MemoryRevealScene index="01" headline={<>The words were only<br />the beginning.</>} message={surpriseContent.firstMemory.message} onNext={() => setStage('movieQuestion')} />;
+      case 'loveReveal': return <MemoryRevealScene index="01" headline={surpriseContent.firstMemory.revealHeadline} message={surpriseContent.firstMemory.message} onNext={() => setStage('movieQuestion')} />;
       case 'movieQuestion': return <MovieScene onChoose={chooseMovie} feedback={feedback} />;
-      case 'movieReveal': return <MemoryRevealScene index="02" headline="Our first movie." message={surpriseContent.movieMemory.message} onNext={() => setStage('dateQuestion')} />;
+      case 'movieReveal': return <MemoryRevealScene index="02" headline={surpriseContent.movieMemory.revealHeadline} message={surpriseContent.movieMemory.message} onNext={() => setStage('dateQuestion')} />;
       case 'dateQuestion': return <DateScene complete={dateComplete} onChoose={chooseDate} feedback={feedback} />;
-      case 'dateReveal': return <MemoryRevealScene index="03" headline="The beginning of us." message={surpriseContent.dateMemory.message} onNext={() => setStage('favourite')} />;
+      case 'dateReveal': return <MemoryRevealScene index="03" headline={surpriseContent.dateMemory.revealHeadline} message={surpriseContent.dateMemory.message} onNext={() => setStage('favourite')} />;
       case 'favourite': return <FavouriteScene value={favouriteDraft} error={favouriteSaveError} onChange={setFavouriteDraft} onSubmit={submitFavouriteMemory} />;
       case 'processing': return <ProcessingScene match={false} />;
       case 'match': return <ProcessingScene match onNext={() => setStage('years')} />;
@@ -225,7 +225,7 @@ export default function SurpriseExperience() {
       <footer className={styles.footer}>
         <span>BUILT WITH LOVE</span>
         <button className={styles.secretTrigger} type="button" aria-label="A little hidden surprise" onClick={unlockSecret}>✧</button>
-        <span>11 / ∞</span>
+        <span>{surpriseContent.years} / ∞</span>
       </footer>
       {secretOpen && (
         <div className={styles.secretOverlay} role="presentation" onClick={() => setSecretOpen(false)}>
