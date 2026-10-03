@@ -210,6 +210,19 @@
 .terminal p { margin: 0 0 11px; color: #dfc98f; font: 11px/1.5 monospace; }
 .terminal p:last-child { margin-bottom: 0; color: #d4dfb8; }
 .finalMessage { margin: 34px 0 0; color: #f3e5c9; font-size: clamp(23px, 6vw, 30px); line-height: 1.35; font-style: italic; }
+.comfortTrigger { width: 40px; height: 40px; margin: 20px auto -25px; display: grid; place-items: center; border: 1px solid rgba(214, 184, 115, .12); border-radius: 50%; background: rgba(255, 248, 229, .015); color: rgba(214, 184, 115, .3); font-size: 15px; cursor: pointer; transition: color .25s, border-color .25s, background .25s, transform .25s; }
+.comfortTrigger:hover, .comfortTrigger:focus-visible { color: #f1d99c; border-color: rgba(214, 184, 115, .55); background: rgba(214, 184, 115, .08); transform: scale(1.08); outline: none; }
+.comfortScene { padding-top: 42px; padding-bottom: 42px; }
+.comfortBloom { position: relative; width: 104px; height: 104px; margin: 0 auto 31px; display: grid; place-items: center; border: 1px solid rgba(214, 184, 115, .22); border-radius: 50%; background: radial-gradient(circle, rgba(214, 184, 115, .11), transparent 68%); color: #e4c887; }
+.comfortBloom span { color: #e1a794; font-size: 32px; animation: heart 3.4s ease-in-out infinite; }
+.comfortBloom i { position: absolute; color: rgba(228, 200, 135, .76); font-size: 13px; font-style: normal; }
+.comfortBloom i:nth-of-type(1) { top: 7px; left: 25px; }
+.comfortBloom i:nth-of-type(2) { top: 28px; right: 6px; }
+.comfortBloom i:nth-of-type(3) { bottom: 11px; left: 13px; }
+.comfortScene h1 { max-width: 370px; margin: 0 auto; color: #f4e6ce; font-size: clamp(34px, 9vw, 47px); font-weight: 400; line-height: 1.16; }
+.comfortMessage { max-width: 350px; margin: 22px auto 0; color: rgba(248, 238, 219, .76); font-size: 15px; line-height: 1.9; }
+.comfortSignoff { margin: 25px 0 0; color: #e4c887; font-size: 13px; font-style: italic; }
+.comfortScene .primaryButton { margin-top: 35px; }
 
 .secretTrigger { padding: 8px; border: 0; background: transparent; color: rgba(214, 184, 115, .4); font-size: 15px; cursor: pointer; }
 .secretTrigger:hover, .secretTrigger:focus-visible { color: #eddaa7; outline: none; }

@@ -1161,6 +1161,103 @@
   line-height: 1.35;
 }
 
+.surprise-module__gwZywq__comfortTrigger {
+  color: #d6b8734d;
+  cursor: pointer;
+  background: #fff8e504;
+  border: 1px solid #d6b8731f;
+  border-radius: 50%;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  margin: 20px auto -25px;
+  font-size: 15px;
+  transition: color .25s, border-color .25s, background .25s, transform .25s;
+  display: grid;
+}
+
+.surprise-module__gwZywq__comfortTrigger:hover, .surprise-module__gwZywq__comfortTrigger:focus-visible {
+  color: #f1d99c;
+  background: #d6b87314;
+  border-color: #d6b8738c;
+  outline: none;
+  transform: scale(1.08);
+}
+
+.surprise-module__gwZywq__comfortScene {
+  padding-top: 42px;
+  padding-bottom: 42px;
+}
+
+.surprise-module__gwZywq__comfortBloom {
+  color: #e4c887;
+  background: radial-gradient(circle, #d6b8731c, #0000 68%);
+  border: 1px solid #d6b87338;
+  border-radius: 50%;
+  place-items: center;
+  width: 104px;
+  height: 104px;
+  margin: 0 auto 31px;
+  display: grid;
+  position: relative;
+}
+
+.surprise-module__gwZywq__comfortBloom span {
+  color: #e1a794;
+  font-size: 32px;
+  animation: 3.4s ease-in-out infinite surprise-module__gwZywq__heart;
+}
+
+.surprise-module__gwZywq__comfortBloom i {
+  color: #e4c887c2;
+  font-size: 13px;
+  font-style: normal;
+  position: absolute;
+}
+
+.surprise-module__gwZywq__comfortBloom i:first-of-type {
+  top: 7px;
+  left: 25px;
+}
+
+.surprise-module__gwZywq__comfortBloom i:nth-of-type(2) {
+  top: 28px;
+  right: 6px;
+}
+
+.surprise-module__gwZywq__comfortBloom i:nth-of-type(3) {
+  bottom: 11px;
+  left: 13px;
+}
+
+.surprise-module__gwZywq__comfortScene h1 {
+  color: #f4e6ce;
+  max-width: 370px;
+  margin: 0 auto;
+  font-size: clamp(34px, 9vw, 47px);
+  font-weight: 400;
+  line-height: 1.16;
+}
+
+.surprise-module__gwZywq__comfortMessage {
+  color: #f8eedbc2;
+  max-width: 350px;
+  margin: 22px auto 0;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.surprise-module__gwZywq__comfortSignoff {
+  color: #e4c887;
+  margin: 25px 0 0;
+  font-size: 13px;
+  font-style: italic;
+}
+
+.surprise-module__gwZywq__comfortScene .surprise-module__gwZywq__primaryButton {
+  margin-top: 35px;
+}
+
 .surprise-module__gwZywq__secretTrigger {
   color: #d6b87366;
   cursor: pointer;

@@ -7,6 +7,7 @@ import { surpriseContent } from './content';
 import {
   BootScene,
   CelebrationScene,
+  ComfortScene,
   DateScene,
   FavouriteScene,
   HaldiScene,
@@ -21,7 +22,7 @@ import {
 type Stage =
   | 'boot' | 'ready' | 'loveQuestion' | 'loveReveal'
   | 'movieQuestion' | 'movieReveal' | 'dateQuestion' | 'dateReveal'
-  | 'favourite' | 'processing' | 'match' | 'years' | 'haldi' | 'celebration';
+  | 'favourite' | 'processing' | 'match' | 'years' | 'haldi' | 'celebration' | 'comfort';
 
 const reducedMotionQuery = '(prefers-reduced-motion: reduce)';
 
@@ -186,7 +187,8 @@ export default function SurpriseExperience() {
       case 'match': return <ProcessingScene match onNext={() => setStage('years')} />;
       case 'years': return <YearsScene onRun={() => setStage('haldi')} />;
       case 'haldi': return <HaldiScene onGo={() => setStage('celebration')} />;
-      case 'celebration': return <CelebrationScene commandsVisible={commandCount} />;
+      case 'celebration': return <CelebrationScene commandsVisible={commandCount} onComfort={() => setStage('comfort')} />;
+      case 'comfort': return <ComfortScene onReturn={() => setStage('celebration')} />;
     }
   };
 

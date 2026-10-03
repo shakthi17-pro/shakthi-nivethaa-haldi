@@ -68,6 +68,12 @@ const surpriseContent = {
         city: 'MADURAI',
         finalMessage: "Close this. I'm waiting for you."
     },
+    comfortRoom: {
+        eyebrow: 'A quiet little place, just for you',
+        title: 'Take a breath, my love.',
+        message: 'Whatever today brings, you do not have to carry it alone. I am right here with you. We can take this one moment at a time.',
+        signoff: 'Always by your side, Shakthi ❤️'
+    },
     secretMessage: 'You found my little secret. I love you more than this code could ever say.'
 };
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
@@ -82,6 +88,8 @@ __turbopack_context__.s([
     ()=>BootScene,
     "CelebrationScene",
     ()=>CelebrationScene,
+    "ComfortScene",
+    ()=>ComfortScene,
     "DateScene",
     ()=>DateScene,
     "FavouriteScene",
@@ -1579,7 +1587,7 @@ function HaldiScene({ onGo }) {
     }, this);
 }
 _c10 = HaldiScene;
-function CelebrationScene({ commandsVisible }) {
+function CelebrationScene({ commandsVisible, onComfort }) {
     const commands = [
         '> executing haldi.exe',
         `> destination: ${__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$surprise$2f$content$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["surpriseContent"].haldi.venue}, ${__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$surprise$2f$content$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["surpriseContent"].haldi.city}`,
@@ -1628,6 +1636,17 @@ function CelebrationScene({ commandsVisible }) {
                 fileName: "[project]/app/surprise/scenes.tsx",
                 lineNumber: 231,
                 columnNumber: 46
+            }, this),
+            commandsVisible >= commands.length && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                className: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$surprise$2f$surprise$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].comfortTrigger,
+                type: "button",
+                "aria-label": "Open your quiet comfort room",
+                onClick: onComfort,
+                children: "✿"
+            }, void 0, false, {
+                fileName: "[project]/app/surprise/scenes.tsx",
+                lineNumber: 232,
+                columnNumber: 46
             }, this)
         ]
     }, void 0, true, {
@@ -1637,7 +1656,116 @@ function CelebrationScene({ commandsVisible }) {
     }, this);
 }
 _c11 = CelebrationScene;
-var _c, _c1, _c2, _c3, _c4, _c5, _c6, _c7, _c8, _c9, _c10, _c11;
+function ComfortScene({ onReturn }) {
+    const room = __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$surprise$2f$content$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["surpriseContent"].comfortRoom;
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+        className: `${__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$surprise$2f$surprise$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].panel} ${__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$surprise$2f$surprise$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].comfortScene}`,
+        "aria-live": "polite",
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$surprise$2f$surprise$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].comfortBloom,
+                "aria-hidden": "true",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                        children: "♡"
+                    }, void 0, false, {
+                        fileName: "[project]/app/surprise/scenes.tsx",
+                        lineNumber: 241,
+                        columnNumber: 63
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
+                        children: "✿"
+                    }, void 0, false, {
+                        fileName: "[project]/app/surprise/scenes.tsx",
+                        lineNumber: 241,
+                        columnNumber: 77
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
+                        children: "✧"
+                    }, void 0, false, {
+                        fileName: "[project]/app/surprise/scenes.tsx",
+                        lineNumber: 241,
+                        columnNumber: 85
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
+                        children: "✿"
+                    }, void 0, false, {
+                        fileName: "[project]/app/surprise/scenes.tsx",
+                        lineNumber: 241,
+                        columnNumber: 93
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/app/surprise/scenes.tsx",
+                lineNumber: 241,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$surprise$2f$surprise$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].kicker,
+                children: room.eyebrow
+            }, void 0, false, {
+                fileName: "[project]/app/surprise/scenes.tsx",
+                lineNumber: 242,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
+                children: room.title
+            }, void 0, false, {
+                fileName: "[project]/app/surprise/scenes.tsx",
+                lineNumber: 243,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$surprise$2f$surprise$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].comfortMessage,
+                children: room.message
+            }, void 0, false, {
+                fileName: "[project]/app/surprise/scenes.tsx",
+                lineNumber: 244,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$surprise$2f$surprise$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].comfortSignoff,
+                children: room.signoff
+            }, void 0, false, {
+                fileName: "[project]/app/surprise/scenes.tsx",
+                lineNumber: 245,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                className: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$surprise$2f$surprise$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].primaryButton,
+                type: "button",
+                onClick: onReturn,
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                        children: "BACK TO OUR MOMENT"
+                    }, void 0, false, {
+                        fileName: "[project]/app/surprise/scenes.tsx",
+                        lineNumber: 246,
+                        columnNumber: 81
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                        "aria-hidden": "true",
+                        children: "↗"
+                    }, void 0, false, {
+                        fileName: "[project]/app/surprise/scenes.tsx",
+                        lineNumber: 246,
+                        columnNumber: 112
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/app/surprise/scenes.tsx",
+                lineNumber: 246,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "[project]/app/surprise/scenes.tsx",
+        lineNumber: 240,
+        columnNumber: 5
+    }, this);
+}
+_c12 = ComfortScene;
+var _c, _c1, _c2, _c3, _c4, _c5, _c6, _c7, _c8, _c9, _c10, _c11, _c12;
 __turbopack_context__.k.register(_c, "MemoryHeading");
 __turbopack_context__.k.register(_c1, "BootScene");
 __turbopack_context__.k.register(_c2, "ReadyScene");
@@ -1650,6 +1778,7 @@ __turbopack_context__.k.register(_c8, "ProcessingScene");
 __turbopack_context__.k.register(_c9, "YearsScene");
 __turbopack_context__.k.register(_c10, "HaldiScene");
 __turbopack_context__.k.register(_c11, "CelebrationScene");
+__turbopack_context__.k.register(_c12, "ComfortScene");
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
 }
@@ -1866,7 +1995,7 @@ function SurpriseExperience() {
                     checks: checks
                 }, void 0, false, {
                     fileName: "[project]/app/surprise/surprise-experience.tsx",
-                    lineNumber: 176,
+                    lineNumber: 177,
                     columnNumber: 27
                 }, this);
             case 'ready':
@@ -1874,7 +2003,7 @@ function SurpriseExperience() {
                     onBegin: beginExperience
                 }, void 0, false, {
                     fileName: "[project]/app/surprise/surprise-experience.tsx",
-                    lineNumber: 177,
+                    lineNumber: 178,
                     columnNumber: 28
                 }, this);
             case 'loveQuestion':
@@ -1887,7 +2016,7 @@ function SurpriseExperience() {
                     feedback: feedback
                 }, void 0, false, {
                     fileName: "[project]/app/surprise/surprise-experience.tsx",
-                    lineNumber: 178,
+                    lineNumber: 179,
                     columnNumber: 35
                 }, this);
             case 'loveReveal':
@@ -1898,7 +2027,7 @@ function SurpriseExperience() {
                     onNext: ()=>setStage('movieQuestion')
                 }, void 0, false, {
                     fileName: "[project]/app/surprise/surprise-experience.tsx",
-                    lineNumber: 179,
+                    lineNumber: 180,
                     columnNumber: 33
                 }, this);
             case 'movieQuestion':
@@ -1907,7 +2036,7 @@ function SurpriseExperience() {
                     feedback: feedback
                 }, void 0, false, {
                     fileName: "[project]/app/surprise/surprise-experience.tsx",
-                    lineNumber: 180,
+                    lineNumber: 181,
                     columnNumber: 36
                 }, this);
             case 'movieReveal':
@@ -1918,7 +2047,7 @@ function SurpriseExperience() {
                     onNext: ()=>setStage('dateQuestion')
                 }, void 0, false, {
                     fileName: "[project]/app/surprise/surprise-experience.tsx",
-                    lineNumber: 181,
+                    lineNumber: 182,
                     columnNumber: 34
                 }, this);
             case 'dateQuestion':
@@ -1928,7 +2057,7 @@ function SurpriseExperience() {
                     feedback: feedback
                 }, void 0, false, {
                     fileName: "[project]/app/surprise/surprise-experience.tsx",
-                    lineNumber: 182,
+                    lineNumber: 183,
                     columnNumber: 35
                 }, this);
             case 'dateReveal':
@@ -1939,7 +2068,7 @@ function SurpriseExperience() {
                     onNext: ()=>setStage('favourite')
                 }, void 0, false, {
                     fileName: "[project]/app/surprise/surprise-experience.tsx",
-                    lineNumber: 183,
+                    lineNumber: 184,
                     columnNumber: 33
                 }, this);
             case 'favourite':
@@ -1950,7 +2079,7 @@ function SurpriseExperience() {
                     onSubmit: submitFavouriteMemory
                 }, void 0, false, {
                     fileName: "[project]/app/surprise/surprise-experience.tsx",
-                    lineNumber: 184,
+                    lineNumber: 185,
                     columnNumber: 32
                 }, this);
             case 'processing':
@@ -1958,7 +2087,7 @@ function SurpriseExperience() {
                     match: false
                 }, void 0, false, {
                     fileName: "[project]/app/surprise/surprise-experience.tsx",
-                    lineNumber: 185,
+                    lineNumber: 186,
                     columnNumber: 33
                 }, this);
             case 'match':
@@ -1967,7 +2096,7 @@ function SurpriseExperience() {
                     onNext: ()=>setStage('years')
                 }, void 0, false, {
                     fileName: "[project]/app/surprise/surprise-experience.tsx",
-                    lineNumber: 186,
+                    lineNumber: 187,
                     columnNumber: 28
                 }, this);
             case 'years':
@@ -1975,7 +2104,7 @@ function SurpriseExperience() {
                     onRun: ()=>setStage('haldi')
                 }, void 0, false, {
                     fileName: "[project]/app/surprise/surprise-experience.tsx",
-                    lineNumber: 187,
+                    lineNumber: 188,
                     columnNumber: 28
                 }, this);
             case 'haldi':
@@ -1983,16 +2112,25 @@ function SurpriseExperience() {
                     onGo: ()=>setStage('celebration')
                 }, void 0, false, {
                     fileName: "[project]/app/surprise/surprise-experience.tsx",
-                    lineNumber: 188,
+                    lineNumber: 189,
                     columnNumber: 28
                 }, this);
             case 'celebration':
                 return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$surprise$2f$scenes$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CelebrationScene"], {
-                    commandsVisible: commandCount
+                    commandsVisible: commandCount,
+                    onComfort: ()=>setStage('comfort')
                 }, void 0, false, {
                     fileName: "[project]/app/surprise/surprise-experience.tsx",
-                    lineNumber: 189,
+                    lineNumber: 190,
                     columnNumber: 34
+                }, this);
+            case 'comfort':
+                return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$surprise$2f$scenes$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ComfortScene"], {
+                    onReturn: ()=>setStage('celebration')
+                }, void 0, false, {
+                    fileName: "[project]/app/surprise/surprise-experience.tsx",
+                    lineNumber: 191,
+                    columnNumber: 30
                 }, this);
         }
     };
@@ -2023,7 +2161,7 @@ function SurpriseExperience() {
                 }
             }, void 0, false, {
                 fileName: "[project]/app/surprise/surprise-experience.tsx",
-                lineNumber: 201,
+                lineNumber: 203,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2034,7 +2172,7 @@ function SurpriseExperience() {
                         className: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$surprise$2f$surprise$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].orb
                     }, void 0, false, {
                         fileName: "[project]/app/surprise/surprise-experience.tsx",
-                        lineNumber: 211,
+                        lineNumber: 213,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2042,7 +2180,7 @@ function SurpriseExperience() {
                         children: "✿"
                     }, void 0, false, {
                         fileName: "[project]/app/surprise/surprise-experience.tsx",
-                        lineNumber: 211,
+                        lineNumber: 213,
                         columnNumber: 40
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2050,7 +2188,7 @@ function SurpriseExperience() {
                         children: "✿"
                     }, void 0, false, {
                         fileName: "[project]/app/surprise/surprise-experience.tsx",
-                        lineNumber: 211,
+                        lineNumber: 213,
                         columnNumber: 82
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2058,13 +2196,13 @@ function SurpriseExperience() {
                         children: "✿"
                     }, void 0, false, {
                         fileName: "[project]/app/surprise/surprise-experience.tsx",
-                        lineNumber: 211,
+                        lineNumber: 213,
                         columnNumber: 124
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/surprise/surprise-experience.tsx",
-                lineNumber: 210,
+                lineNumber: 212,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("header", {
@@ -2074,7 +2212,7 @@ function SurpriseExperience() {
                         children: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$surprise$2f$content$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["surpriseContent"].experienceName
                     }, void 0, false, {
                         fileName: "[project]/app/surprise/surprise-experience.tsx",
-                        lineNumber: 214,
+                        lineNumber: 216,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2092,14 +2230,14 @@ function SurpriseExperience() {
                                         children: musicPlaying ? 'Ⅱ' : '▶'
                                     }, void 0, false, {
                                         fileName: "[project]/app/surprise/surprise-experience.tsx",
-                                        lineNumber: 218,
+                                        lineNumber: 220,
                                         columnNumber: 15
                                     }, this),
                                     musicPlaying ? ' MUSIC ON' : ' MUSIC OFF'
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/surprise/surprise-experience.tsx",
-                                lineNumber: 217,
+                                lineNumber: 219,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2107,26 +2245,26 @@ function SurpriseExperience() {
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {}, void 0, false, {
                                         fileName: "[project]/app/surprise/surprise-experience.tsx",
-                                        lineNumber: 221,
+                                        lineNumber: 223,
                                         columnNumber: 43
                                     }, this),
                                     " PRIVATE SESSION"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/surprise/surprise-experience.tsx",
-                                lineNumber: 221,
+                                lineNumber: 223,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/surprise/surprise-experience.tsx",
-                        lineNumber: 215,
+                        lineNumber: 217,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/surprise/surprise-experience.tsx",
-                lineNumber: 213,
+                lineNumber: 215,
                 columnNumber: 7
             }, this),
             renderStage(),
@@ -2137,7 +2275,7 @@ function SurpriseExperience() {
                         children: "BUILT WITH LOVE"
                     }, void 0, false, {
                         fileName: "[project]/app/surprise/surprise-experience.tsx",
-                        lineNumber: 226,
+                        lineNumber: 228,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2148,7 +2286,7 @@ function SurpriseExperience() {
                         children: "✧"
                     }, void 0, false, {
                         fileName: "[project]/app/surprise/surprise-experience.tsx",
-                        lineNumber: 227,
+                        lineNumber: 229,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2158,13 +2296,13 @@ function SurpriseExperience() {
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/surprise/surprise-experience.tsx",
-                        lineNumber: 228,
+                        lineNumber: 230,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/surprise/surprise-experience.tsx",
-                lineNumber: 225,
+                lineNumber: 227,
                 columnNumber: 7
             }, this),
             secretOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2186,7 +2324,7 @@ function SurpriseExperience() {
                             children: "×"
                         }, void 0, false, {
                             fileName: "[project]/app/surprise/surprise-experience.tsx",
-                            lineNumber: 233,
+                            lineNumber: 235,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2194,7 +2332,7 @@ function SurpriseExperience() {
                             children: "Only for you"
                         }, void 0, false, {
                             fileName: "[project]/app/surprise/surprise-experience.tsx",
-                            lineNumber: 234,
+                            lineNumber: 236,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -2202,31 +2340,31 @@ function SurpriseExperience() {
                             children: "❤️ SECRET MODE UNLOCKED"
                         }, void 0, false, {
                             fileName: "[project]/app/surprise/surprise-experience.tsx",
-                            lineNumber: 235,
+                            lineNumber: 237,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                             children: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$surprise$2f$content$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["surpriseContent"].secretMessage
                         }, void 0, false, {
                             fileName: "[project]/app/surprise/surprise-experience.tsx",
-                            lineNumber: 236,
+                            lineNumber: 238,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/surprise/surprise-experience.tsx",
-                    lineNumber: 232,
+                    lineNumber: 234,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/surprise/surprise-experience.tsx",
-                lineNumber: 231,
+                lineNumber: 233,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/surprise/surprise-experience.tsx",
-        lineNumber: 200,
+        lineNumber: 202,
         columnNumber: 5
     }, this);
 }
@@ -2256,6 +2394,11 @@ __turbopack_context__.v({
   "checkVisible": "surprise-module__gwZywq__checkVisible",
   "checks": "surprise-module__gwZywq__checks",
   "chosenAnswer": "surprise-module__gwZywq__chosenAnswer",
+  "comfortBloom": "surprise-module__gwZywq__comfortBloom",
+  "comfortMessage": "surprise-module__gwZywq__comfortMessage",
+  "comfortScene": "surprise-module__gwZywq__comfortScene",
+  "comfortSignoff": "surprise-module__gwZywq__comfortSignoff",
+  "comfortTrigger": "surprise-module__gwZywq__comfortTrigger",
   "comingSoon": "surprise-module__gwZywq__comingSoon",
   "cursor": "surprise-module__gwZywq__cursor",
   "dependency": "surprise-module__gwZywq__dependency",

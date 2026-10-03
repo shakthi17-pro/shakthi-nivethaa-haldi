@@ -219,7 +219,7 @@ export function HaldiScene({ onGo }: { onGo: () => void }) {
   );
 }
 
-export function CelebrationScene({ commandsVisible }: { commandsVisible: number }) {
+export function CelebrationScene({ commandsVisible, onComfort }: { commandsVisible: number; onComfort: () => void }) {
   const commands = ['> executing haldi.exe', `> destination: ${surpriseContent.haldi.venue}, ${surpriseContent.haldi.city}`, '> status: READY ❤️'];
   return (
     <section className={`${styles.panel} ${styles.celebration}`} aria-live="polite">
@@ -229,6 +229,21 @@ export function CelebrationScene({ commandsVisible }: { commandsVisible: number 
         {commands.slice(0, commandsVisible).map((command) => <p key={command}>{command}</p>)}
       </div>
       {commandsVisible >= commands.length && <p className={styles.finalMessage}>{surpriseContent.haldi.finalMessage}</p>}
+      {commandsVisible >= commands.length && <button className={styles.comfortTrigger} type="button" aria-label="Open your quiet comfort room" onClick={onComfort}>✿</button>}
+    </section>
+  );
+}
+
+export function ComfortScene({ onReturn }: { onReturn: () => void }) {
+  const room = surpriseContent.comfortRoom;
+  return (
+    <section className={`${styles.panel} ${styles.comfortScene}`} aria-live="polite">
+      <div className={styles.comfortBloom} aria-hidden="true"><span>♡</span><i>✿</i><i>✧</i><i>✿</i></div>
+      <p className={styles.kicker}>{room.eyebrow}</p>
+      <h1>{room.title}</h1>
+      <p className={styles.comfortMessage}>{room.message}</p>
+      <p className={styles.comfortSignoff}>{room.signoff}</p>
+      <button className={styles.primaryButton} type="button" onClick={onReturn}><span>BACK TO OUR MOMENT</span><span aria-hidden="true">↗</span></button>
     </section>
   );
 }
